@@ -40,12 +40,19 @@
 			      <ul class="nav navbar-nav navbar-right">
 			        <li class="dropdown">
 			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Log In <span class="caret"></span></a>
-			          <ul class="dropdown-menu">
+	<!-- 		          <ul class="dropdown-menu">
 			            <li><a>I am a...</a></li>
 			            <li role="separator" class="divider"></li>
 			            <li><a href="#">Host</a></li>
 			            <li><a href="#">Partner</a></li>
-			          </ul>
+			          </ul> -->
+			          <ul class="dropdown-menu" id="loginDropdown">
+				          <li><form action="/dashboard" method="post" accept-charset="UTF-8">
+						  <input class="form-control" id="user_username" type="text" name="user[username]" placeholder="username" />
+						  <input class="form-control" id="user_password"  type="password" name="user[password]" placeholder= "password"/>
+						  <button class="btn btn-default btn-block" type="submit">Log In</button>
+						</form>
+						</ul>
 			        </li>
 			      </ul>
 			    </div><!-- /.navbar-collapse -->

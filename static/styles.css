@@ -20,12 +20,7 @@
     font-family: "Lato";
 }
 
-.site-wrapper {
-  display: table;
-  width: 100%;
-  height: 100%; /* For at least Firefox */
-  min-height: 100%;
-  background: rgba(78,74,74,0.6);
-/*  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
-          box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
+#loginDropdown{
+	/*margin: 10px;*/
+	padding: 50px !important;
 }
