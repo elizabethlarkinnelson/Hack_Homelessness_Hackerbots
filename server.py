@@ -22,7 +22,7 @@ app.jinja_env.auto_reload = True
 def index():
     """Homepage"""
 
-    return render_template('base.html')
+    return render_template('homepage.html')
 
 
 # @app.route('/register_partner')
