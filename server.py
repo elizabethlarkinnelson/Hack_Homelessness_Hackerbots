@@ -24,7 +24,7 @@ def index():
     return render_template('homepage.html')
 
 
-@app.route('/register_guest')
+@app.route('/register_partner')
 def guest_registration():
 
     return "FIX ME"
@@ -57,7 +57,7 @@ def display_partners():
 
 if __name__ == "__main__":
 
-    # app.debug = True
+    app.debug = True
     # connect_to_db(app)
     # DebugToolbarExtension(app)
 

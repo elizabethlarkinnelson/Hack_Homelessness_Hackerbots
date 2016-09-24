@@ -1,8 +1,58 @@
-{% extends 'base.html' %}
-
+{% extends 'base.html' %} 
+{% block page_specific_script_tag %}
+  <link href="/static/css/cover.css" rel="stylesheet">
+{% endblock %}
 {% block content %}
 
-"I'm working"
+    <style>
+        html,
+        body{
+            position: relative;
+            background: #000 url("/static/img/SleepingKid.jpeg") center center;
+            width: 100%;
+            height: 100%;
 
-"This is Krishelle's second change"
+            background-size: cover;
+            overflow: hidden;
+            -webkit-background-size: cover; /* safari */
+            -moz-background-size: cover; /* firefox */
+            -o-background-size: cover; /* Opera */
+            /* Ensure the html element always takes up the full height of the browser window */
+            min-height: 100%;
+            background-color: #fff;
+            color: #fff;
+            text-align: center;
+
+        }
+
+    </style>
+    <div class="site-wrapper">
+
+        <div class="site-wrapper-inner">
+                <div class="cover-container">
+            <!-- <img src="/static/img/ParrotLogo2.png" height="400px" width=auto> -->
+                        <p class="slogon">Have an extra bed? Donate a month.</p>
+                        <div class="col-sm-4">
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <p id="subheading">Preventing the free fall, providing a place to land.</p>
+                                
+                                <a href="/register_host"><button class="btn btn-default btn-lg" id="start-button">Become a Host</button></a>
+                                 <a href="/register_host"><button class="btn btn-default btn-lg" id="start-button">Become a Partner</button></a>
+             
+                        	</div>
+                        </div>
+                    <div class="row">
+                        <a href="/find_sponsor" id="start-button">Need Housing? Find a Sponsor</a>
+                    </div>
+
+
+                        
+                        </div>
+
+            </div>
+        </div>
+    </div>
 {% endblock %}
+
