@@ -24,41 +24,41 @@ def index():
     return render_template('homepage.html')
 
 
-@app.route('/register_guest')
-def guest_registration():
+# @app.route('/register_guest')
+# def guest_registration():
 
-    return "FIX ME"
-
-
-@app.route('/register_host')
-def host_registration():
+#     return "FIX ME"
 
 
-    return "FIX ME"
-
-@app.route('/login')
-def user_login():
+# @app.route('/register_host')
+# def host_registration():
 
 
-    return "FIX ME"
+#     return "FIX ME"
+
+# @app.route('/login')
+# def user_login():
 
 
-@app.route('/dashboard')
-def display_dashboard():
+#     return "FIX ME"
 
 
-    return "FIX ME"
+# @app.route('/dashboard')
+# def display_dashboard():
 
 
-@app.route('/partners')
-def display_partners():
+#     return "FIX ME"
 
-    return "FIX ME"
+
+# @app.route('/partners')
+# def display_partners():
+
+#     return "FIX ME"
 
 if __name__ == "__main__":
 
-    # app.debug = True
+    app.debug = True
     # connect_to_db(app)
-    # DebugToolbarExtension(app)
+    DebugToolbarExtension(app)
 
     app.run(host="0.0.0.0")
