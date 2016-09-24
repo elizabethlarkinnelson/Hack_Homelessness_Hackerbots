@@ -66,6 +66,11 @@ def display_dashboard():
     return render_template('hostdashboard.html')
 
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> e7bdc156f10f0209ad9767469a7989263a36ff39
 if __name__ == "__main__":
 
     app.debug = True

@@ -8,6 +8,7 @@
     color:#ffffff;
     font-family: "Lato";
 }
+<<<<<<< HEAD
 
 #subheading{
     padding-top: 20px;
@@ -26,3 +27,49 @@
 }
 
 
+=======
+
+#subheading{
+    padding-top: 20px;
+    font-size: 23px;
+    line-height: 1.5em;
+    font-style: normal;
+    font-weight: 50 !important;
+    text-align: center;
+    color:#ffffff;
+    font-family: "Lato";
+}
+
+
+.inner-guest-card{
+    background: #fbfbfb;
+    border: 1px solid rgba(0,0,0,.09);
+    box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+    height: 800px;
+}
+
+.current-guest{
+    background-color: #fff;
+}
+
+.rm-padding{
+	padding-left: 0px;
+}
+
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  background: rgba(78,74,74,0.6);
+/*  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
+}
+
+.navbar {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    margin-bottom: 0px;
+    box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+}
+>>>>>>> e7bdc156f10f0209ad9767469a7989263a36ff39
