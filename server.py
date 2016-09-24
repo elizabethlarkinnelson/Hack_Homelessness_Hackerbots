@@ -22,9 +22,7 @@ app.jinja_env.auto_reload = True
 def index():
     """Homepage"""
 
-
-    return render_template('homepage.html')
-
+    return render_template('base.html')
 
 
 # @app.route('/register_partner')
@@ -43,11 +41,22 @@ def index():
 def user_login():
     """Process the login and redirect user to dashboard"""
 
-    email = request.form["email"]
-    password = request.form[]
+    email = request.form['user[username]']
+    password = request.form['user[password]']
 
-
-
+    if Host.query_by_email(email) or Guest.query_by_email(email) is True:
+        if Host.query_by_email(email):
+            if (Host.host_info_object(email)).password != password:
+                return "Wrong password"
+            else:
+                session['user_id'] = (Host.host_info_object(email)).host_id
+                return "Logged In"
+        if Guest.query_by_email(email):
+            if (Guest.guest_info_object(email)).password != password:
+                return "Wrong password"
+            else:
+                session['user_id'] = (Guest.guest_info_object(email)).guest_id
+                return "Logged In"
 
     return "FIX ME"
 

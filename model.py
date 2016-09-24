@@ -19,7 +19,21 @@ class Host(db.Model):
     password = db.Column(db.String(25), nullable=False)
     phone_number = db.Column(db.Integer, nullable=True)
 
+    @classmethod
+    def query_by_email(cls, email):
+        """See if user email is already in system"""
 
+        if cls.query.filter(cls.email == email).first() is not None:
+            return True
+        else:
+            return False
+
+    @classmethod
+    def host_info_object(cls, email):
+        """Return host info as object"""
+
+        if cls.query_by_email(email) is not None:
+            return cls.query.filter(cls.email == email).first()
 
 
 class Guest(db.Model):
@@ -33,6 +47,22 @@ class Guest(db.Model):
     last = db.Column(db.String(25), nullable=False)
     password = db.Column(db.String(25), nullable=False)
     phone_number = db.Column(db.Integer, nullable=True)
+
+    @classmethod
+    def query_by_email(cls, email):
+        """See if user email is already in system"""
+
+        if cls.query.filter(cls.email == email).first() is not None:
+            return True
+        else:
+            return False
+
+    @classmethod
+    def guest_info_object(cls, email):
+        """Return host info as object"""
+
+        if cls.query_by_email(email) is not None:
+            return cls.query.filter(cls.email == email).first()
 
 ############################################################################
 
