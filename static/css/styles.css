@@ -7,5 +7,22 @@
     text-align: center;
     color:#ffffff;
     font-family: "Lato";
-
 }
+
+#subheading{
+    padding-top: 20px;
+    font-size: 23px;
+    line-height: 1.5em;
+    font-style: normal;
+    font-weight: 50 !important;
+    text-align: center;
+    color:#ffffff;
+    font-family: "Lato";
+}
+
+#loginDropdown{
+	/*margin: 10px;*/
+	padding: 50px !important;
+}
+
+
