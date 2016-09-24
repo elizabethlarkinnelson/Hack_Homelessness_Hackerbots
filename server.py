@@ -24,6 +24,36 @@ def index():
     return render_template('homepage.html')
 
 
+@app.route('/register_guest')
+def guest_registration():
+
+    return "FIX ME"
+
+
+@app.route('/register_host')
+def host_registration():
+
+
+    return "FIX ME"
+
+@app.route('/login')
+def user_login():
+
+
+    return "FIX ME"
+
+
+@app.route('/dashboard')
+def display_dashboard():
+
+
+    return "FIX ME"
+
+
+@app.route('/partners')
+def display_partners():
+
+    return "FIX ME"
 
 if __name__ == "__main__":
 
