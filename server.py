@@ -30,7 +30,7 @@ def index():
 @app.route('/register_partner')
 def guest_registration():
 
-#     return "FIX ME"
+    return "FIX ME"
 
 
 # @app.route('/register_host')
@@ -45,12 +45,10 @@ def guest_registration():
 
 #     return "FIX ME"
 
+@app.route('/dashboard')
+def display_dashboard():
 
-# @app.route('/dashboard')
-# def display_dashboard():
-
-
-#     return "FIX ME"
+    return render_template('hostdashboard.html')
 
 
 # @app.route('/partners')
