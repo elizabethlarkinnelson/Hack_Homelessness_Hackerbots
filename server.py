@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, flash, session, redirect, jsonify
 from flask_debugtoolbar import DebugToolbarExtension
 
-from model import connect_to_db
+from model import connect_to_db, db, Host, Guest
 
 from jinja2 import StrictUndefined
 
@@ -27,8 +27,8 @@ def index():
 
 
 
-@app.route('/register_partner')
-def guest_registration():
+# @app.route('/register_partner')
+# def guest_registration():
 
 #     return "FIX ME"
 
@@ -39,34 +39,23 @@ def guest_registration():
 
 #     return "FIX ME"
 
-# @app.route('/login')
-# def user_login():
+@app.route('/login', methods=['POST'])
+def user_login():
+    """Process the login and redirect user to dashboard"""
+
+    email = request.form["email"]
+    password = request.form[]
 
 
-#     return "FIX ME"
 
 
-# @app.route('/dashboard')
-# def display_dashboard():
+    return "FIX ME"
 
-
-#     return "FIX ME"
-
-
-# @app.route('/partners')
-# def display_partners():
-
-#     return "FIX ME"
 
 if __name__ == "__main__":
 
     app.debug = True
-<<<<<<< HEAD
-    # connect_to_db(app)
-    # DebugToolbarExtension(app)
-=======
     connect_to_db(app)
     DebugToolbarExtension(app)
->>>>>>> master
 
     app.run(host="0.0.0.0")
