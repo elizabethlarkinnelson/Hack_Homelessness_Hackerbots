@@ -8,26 +8,6 @@
     color:#ffffff;
     font-family: "Lato";
 }
-<<<<<<< HEAD
-
-#subheading{
-    padding-top: 20px;
-    font-size: 23px;
-    line-height: 1.5em;
-    font-style: normal;
-    font-weight: 50 !important;
-    text-align: center;
-    color:#ffffff;
-    font-family: "Lato";
-}
-
-#loginDropdown{
-	/*margin: 10px;*/
-	padding: 50px !important;
-}
-
-
-=======
 
 #subheading{
     padding-top: 20px;
@@ -72,4 +52,3 @@
     margin-bottom: 0px;
     box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 }
->>>>>>> e7bdc156f10f0209ad9767469a7989263a36ff39
