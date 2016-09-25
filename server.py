@@ -25,17 +25,58 @@ def index():
     return render_template('homepage.html')
 
 
-# @app.route('/register_partner')
-# def guest_registration():
+@app.route('/register_host')
+def host_register():
+    """Display register page"""
 
-    return "FIX ME"
-
-
-# @app.route('/register_host')
-# def host_registration():
+    return render_template('registerhost.html')
 
 
-#     return "FIX ME"
+@app.route('/registerhost', methods=['POST'])
+def register_host():
+    """Process host's registration"""
+
+    email = request.form['email']
+    first = request.form['first']
+    last = request.form['last']
+    password = request.form['password']
+
+    gender = request.form['gender']
+    zip_code = request.form['zip_code']
+    children = request.form['children']
+    handicap_accessible = request.form['handicap_accessible']
+
+    new_user = Host.create_host(email, first, last, password, gender,
+                                zip_code, children, handicap_accessible)
+
+    db.session.add(new_user)
+    db.session.commit()
+
+    return "Hi"
+
+
+@app.route('/registerguest')
+def register_guest():
+    """Process guest's registration"""
+
+    email = request.form['email']
+    first = request.form['first']
+    last = request.form['last']
+    password = request.form['password']
+
+    gender = request.form['gender']
+    zip_code = request.form['zip_code']
+    children = request.form['children']
+    handicap_accessible = request.form['handicap_accessible']
+
+    new_user = Guest.create_guest(email, first, last, password, gender,
+                                zip_code, children, handicap_accessible)
+
+    db.session.add(new_user)
+    db.session.commit()
+
+    return "Hi"
+
 
 @app.route('/login', methods=['POST'])
 def user_login():
@@ -60,10 +101,17 @@ def user_login():
 
     return "FIX ME"
 
-@app.route('/dashboard')
-def display_dashboard():
+
+@app.route('/hdashboard')
+def host_dashboard():
 
     return render_template('hostdashboard.html')
+
+@app.route('/pdashboard')
+def partner_dashboard():
+
+    return render_template('partnerdashboard.html')
+
 
 
 <<<<<<< HEAD
