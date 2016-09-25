@@ -57,6 +57,17 @@
   border: none;
 }
 
+h1 {
+  font-size: ;
+  padding-left: 50px;
+}
+
+#parachute {
+    height: auto; 
+    width: auto; 
+    max-width: 225px; 
+    max-height: 225px;
+}
 
 
 

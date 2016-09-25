@@ -81,7 +81,7 @@ def register_guest():
     db.session.add(new_user)
     db.session.commit()
 
-    return "Hi"
+    return render_template("registerguest.html")
 
 
 @app.route('/login', methods=['POST'])
