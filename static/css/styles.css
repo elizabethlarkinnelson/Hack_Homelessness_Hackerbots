@@ -52,3 +52,32 @@
     border-color: #ffffff;
     box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 }
+
+#partner-card{
+  background-color: #fff;
+}
+
+#guest-network{
+  background: #fbfbfb;
+  padding-right: 0px; 
+}
+
+.rm-padding{
+  padding-left: 0px;
+  padding-right: 0px; 
+}
+
+.network{
+  padding-left: 10px;
+}
+
+.panel-shadow {
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,.1);
+    border: 1px solid rgba(0,0,0,.09);
+    margin-bottom: 10px;
+}
+.guest-image{
+  padding-left: 20px;
+  padding-right: 20px;
+}
