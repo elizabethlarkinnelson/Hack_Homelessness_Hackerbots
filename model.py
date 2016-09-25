@@ -70,6 +70,18 @@ class Guest(db.Model):
     phone_number = db.Column(db.Integer, nullable=True)
 
     @classmethod
+    def create_guest(cls, email, first, last, password,
+                        gender, zip_code, children, handicap_accessible):
+        """Adding a new user to the db"""
+
+        new_user = cls(email=email, first=first, last=last, password=password,
+                       gender=gender, zip_code=zip_code, children=children,
+                       handicap_accessible=handicap_accessible)
+
+        db.session.add(new_user)
+        db.session.commit()
+
+    @classmethod
     def query_by_email(cls, email):
         """See if user email is already in system"""
 

@@ -22,7 +22,7 @@ app.jinja_env.auto_reload = True
 def index():
     """Homepage"""
 
-    return render_template('base.html')
+    return render_template('homepage.html')
 
 
 @app.route('/registerhost')
@@ -47,8 +47,27 @@ def register_host():
 
     return "Hi"
 
+@app.route('/registerguest')
+def register_guest():
+    """Process guest's registration"""
 
+    email = request.form['email']
+    first = request.form['first']
+    last = request.form['last']
+    password = request.form['password']
 
+    gender = request.form['gender']
+    zip_code = request.form['zip_code']
+    children = request.form['children']
+    handicap_accessible = request.form['handicap_accessible']
+
+    new_user = Guest.create_guest(email, first, last, password, gender,
+                                zip_code, children, handicap_accessible)
+
+    db.session.add(new_user)
+    db.session.commit()
+
+    return "Hi"
 
 
 @app.route('/login', methods=['POST'])
