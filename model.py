@@ -55,6 +55,25 @@ class Host(db.Model):
             return cls.query.filter(cls.email == email).first()
 
 
+class Host_Review(db.Model):
+    """Review model for hosts"""
+
+    __tablename__ = "host_reviews"
+
+    host_review_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    host_id = db.Column(db.Integer, db.ForeignKey('hosts.host_id'))
+    host_review = db.Column(db.Text, nullable=False)
+
+    host = db.relationship('Host', backref='host_reviews')
+
+    @classmethod
+    def create_host_review(cls, host_id, host_review):
+        """Adding a new guest_review to the db"""
+
+        review = cls(host_id=host_id, host_review=host_review)
+
+        db.session.add(review)
+        db.session.commit()
 
 
 class Guest(db.Model):
@@ -68,6 +87,18 @@ class Guest(db.Model):
     last = db.Column(db.String(25), nullable=False)
     password = db.Column(db.String(25), nullable=False)
     phone_number = db.Column(db.Integer, nullable=True)
+
+    @classmethod
+    def create_guest(cls, email, first, last, password,
+                        gender, zip_code, children, handicap_accessible):
+        """Adding a new user to the db"""
+
+        new_user = cls(email=email, first=first, last=last, password=password,
+                       gender=gender, zip_code=zip_code, children=children,
+                       handicap_accessible=handicap_accessible)
+
+        db.session.add(new_user)
+        db.session.commit()
 
     @classmethod
     def query_by_email(cls, email):
@@ -84,6 +115,28 @@ class Guest(db.Model):
 
         if cls.query_by_email(email) is not None:
             return cls.query.filter(cls.email == email).first()
+
+
+class Guest_Review(db.Model):
+    """Review model for guests"""
+
+    __tablename__ = "guest_reviews"
+
+    guest_review_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    guest_id = db.Column(db.Integer, db.ForeignKey('guests.guest_id'))
+    guest_review = db.Column(db.Text, nullable=False)
+
+    guest = db.relationship('Guest', backref='guest_reviews')
+
+    @classmethod
+    def create_guest_review(cls, guest_id, guest_review):
+        """Adding a new guest_review to the db"""
+
+        review = cls(guest_id=guest_id, guest_review=guest_review)
+
+        db.session.add(review)
+        db.session.commit()
+
 
 ############################################################################
 

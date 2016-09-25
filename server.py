@@ -25,7 +25,14 @@ def index():
     return render_template('homepage.html')
 
 
-@app.route('/registerhost')
+@app.route('/register_host')
+def host_register():
+    """Display register page"""
+
+    return render_template('registerhost.html')
+
+
+@app.route('/registerhost', methods=['POST'])
 def register_host():
     """Process host's registration"""
 
@@ -48,7 +55,27 @@ def register_host():
     return "Hi"
 
 
+@app.route('/registerguest')
+def register_guest():
+    """Process guest's registration"""
 
+    email = request.form['email']
+    first = request.form['first']
+    last = request.form['last']
+    password = request.form['password']
+
+    gender = request.form['gender']
+    zip_code = request.form['zip_code']
+    children = request.form['children']
+    handicap_accessible = request.form['handicap_accessible']
+
+    new_user = Guest.create_guest(email, first, last, password, gender,
+                                zip_code, children, handicap_accessible)
+
+    db.session.add(new_user)
+    db.session.commit()
+
+    return "Hi"
 
 
 @app.route('/login', methods=['POST'])
