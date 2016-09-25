@@ -107,14 +107,20 @@ def user_login():
 
     return "FIX ME"
 
+@app.route('/aboutus')
+def display_aboutus():
 
-@app.route('/dashboard')
+    return render_template('aboutus.html')
+
+@app.route('/hdashboard')
 def display_dashboard():
-
-
 
     return render_template('hostdashboard.html')
 
+@app.route('/pdashboard')
+def partner_dashboard():
+
+    return render_template('partnerdashboard.html')
 
 
 

@@ -10,7 +10,7 @@
             </div>
         </div>
     </div>
-    
+
     {% for preference in preferences_dict %}
         <div class="row">
             <div class="panel panel-default panel-shadow">
@@ -18,9 +18,9 @@
                     <h2 id ="preference-category-header"> {{ preference.category.english_category }}</h2>
                     <a href="/category/{{preference.category.category_code}}" role="button" class= "btn btn-default pull-right">More {{preference.category.english_category}} articles</a>
                 </div>
-                
+
             </div>
-            
+
             <div class="row">
                     {% for article in preferences_dict[preference] %}
                         <div class="col-sm-12 col-md-6 col-lg-4">
@@ -28,7 +28,7 @@
                                 <img src="{{article.top_image}}">
                                 <div class="caption">
                                     <h4 class="thumbnail-title">{{ article.title }}</h4>
-                                    <a href="/article/{{article.article_id}}" 
+                                    <a href="/article/{{article.article_id}}"
                                     class="btn btn-default center-block" role="button">Parrot</a>
                                 </div>
                             </div>

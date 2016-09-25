@@ -10,7 +10,7 @@
 }
 
 #subheading{
-    padding-top: 20px;
+    padding-top: 20px;s
     font-size: 23px;
     line-height: 1.5em;
     font-style: normal;
@@ -51,4 +51,61 @@
     background-color: #ffffff;
     border-color: #ffffff;
     box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
+}
+
+#partner-card{
+  background-color: #fff;
+}
+
+#guest-network{
+  background: #fbfbfb;
+  padding-right: 0px;
+}
+
+.rm-padding{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.network{
+  padding-left: 20px;
+}
+
+.panel-shadow {
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,.1);
+    border: 1px solid rgba(0,0,0,.09);
+    margin-bottom: 10px;
+}
+.guest-image{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.centered{
+  text-align: center;
+}
+
+.show-more{
+  background-color: #bbb;
+}
+.see-more-link{
+  color:#f3f3f3;
+}
+a.see-more-link:hover{
+  color: #47525d;
+}
+#transparent-logo{
+  width:200px;
+}
+
+.logo{
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+.navbar-brand{
+  padding:0px;
+}
+.partner-welcome{
+  text-align: center;
 }

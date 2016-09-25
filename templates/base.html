@@ -27,16 +27,17 @@
 			        <span class="icon-bar"></span>
 			        <span class="icon-bar"></span>
 			      </button>
-			      <a class="navbar-brand" href="/">Parachute</a>
+			      <!-- <a class="navbar-brand" href="/">Parachute</a> -->
+			      <a href="/" class="navbar-brand"><img id="corner-logo" src="/static/img/LogoTrans.png" height="60px" width="auto"></a>
 			    </div>
 
 			    <!-- Collect the nav links, forms, and other content for toggling -->
 			    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			      <ul class="nav navbar-nav">
-			        <li class="active"><a href="#">Services <span class="sr-only">(current)</span></a></li>
-			        <li><a href="#">Testimonials</a></li>
-			        <li><a href="#">About Us</a></li>
-			      </ul>	
+			        <li><a href="/">Services</a></li>
+			        <li><a href="/">Testimonials</a></li>
+			        <li><a href="/aboutus">About Us</a></li>
+			      </ul>
 			      <ul class="nav navbar-nav navbar-right">
 			        <li class="dropdown">
 			          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Log In <span class="caret"></span></a>
@@ -47,7 +48,7 @@
 			            <li><a href="#">Partner</a></li>
 			          </ul> -->
 			          <!-- <a href="/logout"><button class="btn btn-default">Log Out</button></a> -->
-			          
+
 			          <ul class="dropdown-menu" id="loginDropdowns">
 				          <li><form action="/login" method="post" accept-charset="UTF-8">
 						  <input class="form-control" id="user_username" type="text" name="user[username]" placeholder="username"/>
