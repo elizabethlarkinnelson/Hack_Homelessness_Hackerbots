@@ -54,6 +54,12 @@ def register_host():
 
     return "Hi"
 
+@app.route ('/hostprofile')
+def host_profile():
+    """Display host profile"""
+
+    return render_template("hostprofile.html")
+
 
 @app.route('/registerguest')
 def register_guest():

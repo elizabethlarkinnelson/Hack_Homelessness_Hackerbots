@@ -19,6 +19,8 @@ class Host(db.Model):
     password = db.Column(db.String(25), nullable=False)
     phone_number = db.Column(db.Integer, nullable=True)
 
+    profile_picture = db.Column(db.String(50), nullable=True)
+
     """Host's preferences for guest"""
 
     gender = db.Column(db.String(25), nullable=True)
