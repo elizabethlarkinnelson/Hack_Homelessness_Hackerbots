@@ -25,17 +25,31 @@ def index():
     return render_template('base.html')
 
 
-# @app.route('/register_partner')
-# def guest_registration():
+@app.route('/registerhost')
+def register_host():
+    """Process host's registration"""
 
-    return "FIX ME"
+    email = request.form['email']
+    first = request.form['first']
+    last = request.form['last']
+    password = request.form['password']
+
+    gender = request.form['gender']
+    zip_code = request.form['zip_code']
+    children = request.form['children']
+    handicap_accessible = request.form['handicap_accessible']
+
+    new_user = Host.create_host(email, first, last, password, gender,
+                                zip_code, children, handicap_accessible)
+
+    db.session.add(new_user)
+    db.session.commit()
+
+    return "Hi"
 
 
-# @app.route('/register_host')
-# def host_registration():
 
 
-#     return "FIX ME"
 
 @app.route('/login', methods=['POST'])
 def user_login():
@@ -60,8 +74,11 @@ def user_login():
 
     return "FIX ME"
 
+
 @app.route('/dashboard')
 def display_dashboard():
+
+
 
     return render_template('hostdashboard.html')
 

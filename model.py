@@ -19,6 +19,25 @@ class Host(db.Model):
     password = db.Column(db.String(25), nullable=False)
     phone_number = db.Column(db.Integer, nullable=True)
 
+    """Host's preferences for guest"""
+
+    gender = db.Column(db.String(25), nullable=True)
+    zip_code = db.Column(db.Integer, nullable=False)
+    children = db.Column(db.Boolean, nullable=False)
+    handicap_accessible = db.Column(db.Boolean, nullable=False)
+
+    @classmethod
+    def create_host(cls, email, first, last, password,
+                    gender, zip_code, children, handicap_accessible):
+        """Adding a new user to the db"""
+
+        new_user = cls(email=email, first=first, last=last, password=password,
+                       gender=gender, zip_code=zip_code, children=children,
+                       handicap_accessible=handicap_accessible)
+
+        db.session.add(new_user)
+        db.session.commit()
+
     @classmethod
     def query_by_email(cls, email):
         """See if user email is already in system"""
@@ -34,6 +53,8 @@ class Host(db.Model):
 
         if cls.query_by_email(email) is not None:
             return cls.query.filter(cls.email == email).first()
+
+
 
 
 class Guest(db.Model):
