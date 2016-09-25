@@ -28,7 +28,7 @@ def index():
 # @app.route('/register_partner')
 # def guest_registration():
 
-    return "FIX ME"
+    # return "FIX ME"
 
 
 # @app.route('/register_host')
@@ -60,10 +60,16 @@ def user_login():
 
     return "FIX ME"
 
+@app.route('/aboutus')
+def display_aboutus():
+
+    return render_template('aboutus.html')
+
 @app.route('/dashboard')
 def display_dashboard():
 
     return render_template('hostdashboard.html')
+
 
 if __name__ == "__main__":
 

@@ -52,3 +52,9 @@
     margin-bottom: 0px;
     box-shadow: 0 0 4px rgba(0,0,0,.14),0 4px 8px rgba(0,0,0,.28);
 }
+
+.logo{
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
