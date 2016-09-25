@@ -101,9 +101,13 @@ def user_login():
 
     return "FIX ME"
 
+@app.route('/aboutus')
+def display_aboutus():
+
+    return render_template('aboutus.html')
 
 @app.route('/hdashboard')
-def host_dashboard():
+def display_dashboard():
 
     return render_template('hostdashboard.html')
 
@@ -114,11 +118,6 @@ def partner_dashboard():
 
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> e7bdc156f10f0209ad9767469a7989263a36ff39
 if __name__ == "__main__":
 
     app.debug = True
