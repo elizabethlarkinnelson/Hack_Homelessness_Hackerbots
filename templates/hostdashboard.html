@@ -53,12 +53,16 @@ body{
     <div class="row inner-guest-card" >
         <div class="col-md-8 col-sm-12 col-xs-12 rm-padding">
             <div class="col-xs-12 current-guest" >
-				<h1>Current Stay</h1>
-				<div class="col-md-6"><img src="/static/img/SleepingKid.jpeg" class="img-thumbnail"></div>
-				<div class="col-md-6">
-					<h2>Name:</h2>
-					<h2>Age:</h2>
-					<h2>Bio:</h2>
+            	<div class="row">
+					<h1>Current Stay</h1>
+					<div class="col-md-6"><img src="/static/img/SleepingKid.jpeg" class="img-thumbnail"></div>
+					<div class="col-md-6">
+						<h2>Name:</h2>
+						<h2>Age:</h2>
+						<h2>Bio:</h2>
+					</div>
+				</div>
+				<div class="row col-md-12">
 					<form action='/feedback'>
 						  <div class="form-group">
 						    <h2 for="exampleTextarea">Provide Feedback:</h2>
@@ -69,7 +73,6 @@ body{
 						  <label><input type="checkbox" value="">Open to extending stay</label>
 						  </div>
 						  <button class="btn btn-default" type="submit">Submit</button>
-
 					</form>
 				</div>
 			</div>
