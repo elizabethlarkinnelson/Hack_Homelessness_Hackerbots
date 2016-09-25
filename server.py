@@ -75,12 +75,16 @@ def user_login():
     return "FIX ME"
 
 
-@app.route('/dashboard')
-def display_dashboard():
-
-
+@app.route('/hdashboard')
+def host_dashboard():
 
     return render_template('hostdashboard.html')
+
+@app.route('/pdashboard')
+def partner_dashboard():
+
+    return render_template('partnerdashboard.html')
+
 
 
 
