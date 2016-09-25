@@ -81,6 +81,9 @@
   padding-left: 20px;
   padding-right: 20px;
 }
+.centered{
+  text-align: center;
+}
 
 .logo{
   display: block;
