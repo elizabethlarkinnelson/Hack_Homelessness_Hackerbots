@@ -85,8 +85,23 @@
   text-align: center;
 }
 
+.show-more{
+  background-color: #bbb;
+}
+.see-more-link{
+  color:#f3f3f3;
+}
+a.see-more-link:hover{
+  color: #47525d;
+}
+#transparent-logo{
+  width:100px;
+}
+
+
 .logo{
   display: block;
   width: 60%;
   margin: 0 auto;
 }
+
