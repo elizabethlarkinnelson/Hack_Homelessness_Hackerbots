@@ -81,3 +81,15 @@
   padding-left: 20px;
   padding-right: 20px;
 }
+.show-more{
+  background-color: #bbb;
+}
+.see-more-link{
+  color:#f3f3f3;
+}
+a.see-more-link:hover{
+  color: #47525d;
+}
+#transparent-logo{
+  width:100px;
+}
