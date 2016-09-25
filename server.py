@@ -101,9 +101,13 @@ def user_login():
 
     return "FIX ME"
 
+@app.route('/aboutus')
+def display_aboutus():
+
+    return render_template('aboutus.html')
 
 @app.route('/hdashboard')
-def host_dashboard():
+def display_dashboard():
 
     return render_template('hostdashboard.html')
 
@@ -111,8 +115,6 @@ def host_dashboard():
 def partner_dashboard():
 
     return render_template('partnerdashboard.html')
-
-
 
 
 
