@@ -97,15 +97,15 @@ def user_login():
                 return "Wrong password"
             else:
                 session['user_id'] = (Host.host_info_object(email)).host_id
-                return "Logged In"
+                return render_template("hostdashboard.html")
         if Guest.query_by_email(email):
             if (Guest.guest_info_object(email)).password != password:
                 return "Wrong password"
             else:
                 session['user_id'] = (Guest.guest_info_object(email)).guest_id
-                return "Logged In"
+                return render_template("hostdashboard.html")
 
-    return "FIX ME"
+    return "FIXME"
 
 @app.route('/aboutus')
 def display_aboutus():
