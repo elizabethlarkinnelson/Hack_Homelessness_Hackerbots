@@ -8,7 +8,7 @@
 * [Our Team](#team)
 
 ## <a name="problem"></a>The Problem
-San Francisco only has 35 shelter beds for every 100 people that need a place to lay their head at night. The current housing crisis, as well as other natural causes for homelessness, are resulting in more and more people finding themselves with little to no options for housing. Individuals searching for jobs and unable to find affordable housing need places to stay as they try to turn things around. Parachute was developed at Hack Homelessness Hackathon in San Jose on September 24, 2016 to solve this issue.
+San Francisco only has 35 shelter beds for every 100 people that need a place to lay their head at night. The current housing crisis, as well as other natural causes for homelessness, are resulting in more and more people finding themselves with little to no options for housing. Individuals searching for jobs and unable to find affordable housing need places to stay as they try to turn things around. 
 
 ## <a name="how"></a>How it works
 Parachute matches people who are nearing or experiencing the free fall into homelessness with those with the space and willingness to provide them with a place to land. On a monthly basis hosts get matched with individuals in need of housing as they attempt to get back on their feet. Partner organizations, such as shelters and non-profits, are able to register individuals as guests in our network. We then screen both hosts and guests, as well as rely on reviews, to assure a pleasant and safe experience for both parties. 
