@@ -126,8 +126,8 @@ def partner_dashboard():
 
 if __name__ == "__main__":
 
-    app.debug = True
-    DebugToolbarExtension(app)
+    # app.debug = True
+    # DebugToolbarExtension(app)
     connect_to_db(app)
 
 
