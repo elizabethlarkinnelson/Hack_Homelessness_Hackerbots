@@ -5,6 +5,7 @@
 * [How it works](#how)
 * [Video](#video)
 * [Technologies Used](#technologiesused)
+* [Screenshots](#screenshots)
 * [Our Team](#team)
 
 ## <a name="problem"></a>The Problem
@@ -30,17 +31,18 @@ Parachute matches people who are nearing or experiencing the free fall into home
 
 (dependencies are listed in requirements.txt)
 
-## Homepage
+## <a name="screenshots"></a>Screenshots
+# Homepage
 ![Parachute](/static/img/screenshots/Homepage.png) 
-## About Us
+# About Us
 ![Parachute](/static/img/screenshots/HowItWorks.png)
-## Host's Dashboard
+# Host's Dashboard
 ![Parachute](/static/img/screenshots/HostDashboard.png) 
-## Guest Profile Screen
+# Guest Profile Screen
 ![Parachute](/static/img/screenshots/GuestProfileScreen.png)
-## Host Profile Screen
+# Host Profile Screen
 ![Parachute](/static/img/screenshots/HostProfileScreen.png)
-## Partner Organization's Dashboard
+# Partner Organization's Dashboard
 ![Parachute](/static/img/screenshots/PartnerDashboard.png)
 
 ## <a name="team"></a>Our Team
