@@ -90,6 +90,11 @@ class Guest(db.Model):
     password = db.Column(db.String(25), nullable=False)
     phone_number = db.Column(db.Integer, nullable=True)
 
+    gender = db.Column(db.String(25), nullable=True)
+    zip_code = db.Column(db.Integer, nullable=False)
+    children = db.Column(db.Boolean, nullable=False)
+    handicap_accessible = db.Column(db.Boolean, nullable=False)
+
     @classmethod
     def create_guest(cls, email, first, last, password,
                         gender, zip_code, children, handicap_accessible):
